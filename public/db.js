@@ -6,7 +6,6 @@ const request = indexedDB.open('budget', 1);
 
 //upon onupgradeneeded, open an objectStore
 request.onupgradeneeded = function(event) {
-	console.log('idxdb onupgradeneeded');
 	db = event.target.result;
 	db.createObjectStore('pendingTransac', { autoIncrement: true });
 };
@@ -14,7 +13,6 @@ request.onupgradeneeded = function(event) {
 //upon onsuccess
 request.onsuccess = function(event) {
 	db = event.target.result;
-	console.log('idxdb onsuccess');
 	if (window.onLine) {
 		checkIndexdb();
 	}

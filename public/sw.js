@@ -1,5 +1,3 @@
-console.log('hit SW file');
-
 const fileCacheName = 'file-v2';
 const dataCacheName = 'data-v1';
 
@@ -16,8 +14,7 @@ const filesToCache = [
 
 // install lifecycle method
 self.addEventListener('install', (event) => {
-	console.log('hit install');
-
+	//caching files upon installation
 	event.waitUntil(
 		caches
 			.open(fileCacheName)
@@ -31,8 +28,7 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-	console.log('hit activation');
-
+	//check the cached file and delete outdated keys before activating new serviceworker
 	event.waitUntil(
 		caches
 			.keys()
@@ -41,7 +37,6 @@ self.addEventListener('activate', (event) => {
 					keyList.map((key) => {
 						// if current key does not equal current cache name, delete it
 						if (key !== fileCacheName && key !== dataCacheName) {
-							console.log('deleting cache: ', key);
 							return caches.delete(key);
 						}
 					})
@@ -55,8 +50,6 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-	console.log(event);
-
 	// handle api caching
 	if (event.request.url.includes('/api')) {
 		return event.respondWith(
@@ -90,11 +83,10 @@ self.addEventListener('fetch', (event) => {
 
 				return fetch(event.request).then((response) => {
 					if (!response || !response.basic || !response.status !== 200) {
-						console.log('fetch response: ', response);
 						return response;
 					}
 
-					// response is a stream, reading will consume the response
+					// response is a stream, clone the reponse for both reading by browser and for caching
 					const responseToCache = response.clone();
 
 					caches
