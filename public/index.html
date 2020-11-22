@@ -20,18 +20,24 @@
     </div>
 
     <div class="form">
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
+      <label for="transaction-name">
+       <input type="text" name="transaction-name"id="t-name" placeholder="Name of transaction" />
+      </label>
+      <label for="transaction-amount">
+        <input type="number" name="transaction-amount" min="0" id="t-amount" placeholder="Transaction amount" />
+      </label>
+      <button id="add-btn" aria-label="add transaction button"><i class="fa fa-plus buttons"></i> Add Funds</button>
+      <button id="sub-btn" aria-label="subtract transaction button"><i class="fa fa-minus"></i> Subtract Funds</button>
       <p class="error"></p>
     </div>
 
     <div class="transactions">
       <table>
         <thead>
-          <th>Transaction</th>
-          <th>Amount</th>
+          <tr>
+            <th>Transaction</th>
+            <th>Amount</th>
+          </tr>
         </thead>
         <tbody id="tbody">
           
