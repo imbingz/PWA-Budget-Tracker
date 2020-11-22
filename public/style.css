@@ -1,7 +1,7 @@
 body {
 	font-size: 120%;
 	font-family: Arial;
-	background: linear-gradient(rgb(21, 22, 48) 0% 50%, rgb(3, 6, 24) 54% 100%);
+	background: linear-gradient(rgb(30, 32, 75) 0% 50%, rgb(3, 6, 24) 54% 100%);
 }
 
 .wrapper {
@@ -75,7 +75,7 @@ tr:nth-child(odd) {
 
 @media only screen and (max-width: 768px) {
 	body {
-		background: linear-gradient(rgb(21, 22, 48) 0% 52%, rgb(3, 6, 24) 55% 100%);
+		background-image: linear-gradient(rgb(30, 32, 75) 0% 52%, rgb(3, 6, 24) 55% 100%);
 	}
 	button,
 	input {
@@ -88,7 +88,7 @@ tr:nth-child(odd) {
 
 @media only screen and (max-width: 425px) {
 	body {
-		background: linear-gradient(rgb(21, 22, 48) 0% 70%, rgb(3, 6, 24) 72% 100%);
+		background: linear-gradient(rgb(30, 32, 75) 0% 70%, rgb(3, 6, 24) 72% 100%);
 	}
 	button,
 	input {
