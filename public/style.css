@@ -1,51 +1,106 @@
 body {
-  font-size: 120%;
-  font-family: Arial;
-}
-
-button, input {
-  font-size: 100%;
-  font-family: Arial;
-}
-
-table {
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-.error {
-  color: red;
+	font-size: 120%;
+	font-family: Arial;
+	background: linear-gradient(rgb(21, 22, 48) 0% 50%, rgb(3, 6, 24) 54% 100%);
 }
 
 .wrapper {
-  margin: 0 auto;
-  max-width: 825px;
-  text-align: center;
+	margin: 0 auto;
+	max-width: 825px;
+	text-align: center;
 }
 
 .total {
-  font-size: 150%;
-  text-decoration: underline;
+	font-size: 150%;
+	color: #6666ff;
+}
+
+#total {
+	text-decoration: underline;
 }
 
 .form {
-  margin-top: 25px;
-  width: 100%;
+	margin-top: 25px;
+}
+
+button,
+input {
+	font-size: 100%;
+	font-family: Arial;
+	padding: 0.25rem;
+	margin-top: 0.6rem;
+}
+
+#add-btn {
+	background-color: #33a853;
+}
+
+#sub-btn {
+	background-color: #db5647;
+}
+table {
+	width: 100%;
+}
+
+td,
+th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+th {
+	background-color: #f2c400;
+	color: #151630;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+	color: #dddddd;
+}
+
+.error {
+	color: red;
 }
 
 .transactions {
-  text-align: left;
-  max-height: 300px;
-  overflow: auto;
-  width: 90%;
-  margin: 0 auto;
+	text-align: left;
+	max-height: 300px;
+	overflow: auto;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#myChart {
+	color: #dddddd;
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		background: linear-gradient(rgb(21, 22, 48) 0% 52%, rgb(3, 6, 24) 55% 100%);
+	}
+	button,
+	input {
+		font-size: 90%;
+		font-family: Arial;
+		padding: 0.25rem 0.15rem;
+		margin-top: 0.6rem;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	body {
+		background: linear-gradient(rgb(21, 22, 48) 0% 70%, rgb(3, 6, 24) 72% 100%);
+	}
+	button,
+	input {
+		margin: 0.6rem 0.95rem;
+	}
+	.total {
+		font-size: 130%;
+		color: #6666ff;
+		padding-top: 1rem;
+	}
 }
