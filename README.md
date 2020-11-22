@@ -23,8 +23,9 @@
   #
 
   ##  Project Links
-  ##### GitHub Repo link: https://github.com/imbingz/PWA-Budget-Tracker
   ##### Deployed Link on Heroku:  https://radiant-harbor-00752.herokuapp.com/ 
+  ##### GitHub Repo link: https://github.com/imbingz/PWA-Budget-Tracker
+  
 
 
   ## Screenshots-Demo
