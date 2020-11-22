@@ -73,10 +73,6 @@ tr:nth-child(odd) {
 	margin: 0 auto;
 }
 
-#myChart {
-	color: #dddddd;
-}
-
 @media only screen and (max-width: 768px) {
 	body {
 		background: linear-gradient(rgb(21, 22, 48) 0% 52%, rgb(3, 6, 24) 55% 100%);
@@ -96,10 +92,13 @@ tr:nth-child(odd) {
 	}
 	button,
 	input {
-		margin: 0.6rem 0.95rem;
+		margin: 0.4rem;
+		max-width: 9rem;
+		padding: 0.25rem 0.35rem;
+		font-size: 80%;
 	}
 	.total {
-		font-size: 130%;
+		font-size: 120%;
 		color: #6666ff;
 		padding-top: 1rem;
 	}
