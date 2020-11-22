@@ -30,6 +30,7 @@
 
   ## Screenshots-Demo
   <kbd>![screenshot-demo1](./public/images/demo-1.gif)</kbd>
+  <kbd>![screenshot-demo1](./public/images/demo-3.gif)</kbd>
   <kbd>![screenshot-demo1](./public/images/demo-2.gif)</kbd>
   ## Project Objective
   * A PWA-Budget-Tracker application that allows for offline access and functionality.
