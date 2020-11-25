@@ -13,7 +13,8 @@ request.onupgradeneeded = function(event) {
 //upon onsuccess
 request.onsuccess = function(event) {
 	db = event.target.result;
-	if (window.onLine) {
+	if (window.navigator.onLine) {
+		console.log('window online now ');
 		checkIndexdb();
 	}
 };
@@ -55,7 +56,7 @@ function checkIndexdb() {
 					'Content-Type': 'application/json'
 				}
 			})
-				.then((response) => response.json())
+				.then(response => response.json())
 				.then(() => {
 					//clear indexdb store after successful POST
 					const transaction = db.transaction([ 'pendingTransac' ], 'readwrite');
